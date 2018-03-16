@@ -3,7 +3,7 @@
   "project": {
     "name": "ngair-platform",
     "npmScope": "ngair-platform",
-    "latestMigration": "20180130-angular-devkit-schematics"
+    "latestMigration": "20180313-add-tags"
   },
   "e2e": {
     "protractor": {
@@ -21,6 +21,14 @@
     },
     {
       "project": "apps/website/e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "apps/website-prerender/src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "apps/website-prerender/e2e/tsconfig.e2e.json",
       "exclude": "**/node_modules/**"
     }
   ],
@@ -52,7 +60,11 @@
       "assets": [
         "assets",
         "favicon.ico",
-        { "glob": "ngair-logo.png", "input": "../../../libs/website/assets/src/", "output": "./images/" }
+        {
+          "glob": "ngair-logo.png",
+          "input": "../../../libs/website/assets/src/",
+          "output": "./images/"
+        }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -69,25 +81,62 @@
       "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
-      }
+      },
+      "tags": []
+    },
+    {
+      "name": "website-prerender",
+      "root": "apps/website-prerender/src",
+      "outDir": "dist/apps/website-prerender",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "../../../test.js",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "../../../tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.css"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      },
+      "tags": []
+    },
+    {
+      "name": "website/app",
+      "root": "libs/website/app/src",
+      "test": "../../../../test.js",
+      "appRoot": "",
+      "tags": []
     },
     {
       "name": "website/common-ui",
       "root": "libs/website/common-ui/src",
       "test": "../../../../test.js",
-      "appRoot": ""
+      "appRoot": "",
+      "tags": []
     },
     {
       "name": "website/page-episode",
       "root": "libs/website/page-episode/src",
       "test": "../../../../test.js",
-      "appRoot": ""
+      "appRoot": "",
+      "tags": []
     },
     {
       "name": "website/page-home",
       "root": "libs/website/page-home/src",
       "test": "../../../../test.js",
-      "appRoot": ""
+      "appRoot": "",
+      "tags": []
     }
   ]
 }

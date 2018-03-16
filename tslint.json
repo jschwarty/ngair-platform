@@ -93,10 +93,15 @@
     "nx-enforce-module-boundaries": [
       true,
       {
-        "lazyLoad": [
-          "website/page-episode"
-        ],
-        "allow": []
+        "allow": [],
+        "depConstraints": [
+          {
+            "sourceTag": "*",
+            "onlyDependOnLibsWithTags": [
+              "*"
+            ]
+          }
+        ]
       }
     ]
   }

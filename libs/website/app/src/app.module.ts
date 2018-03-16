@@ -7,7 +7,9 @@ import { HomeComponent, PageHomeModule } from '@ngair-platform/website/page-home
 
 @NgModule({
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({
+      appId: 'ngair-website'
+    }),
     NxModule.forRoot(),
     RouterModule.forRoot(
       [
