@@ -54,9 +54,9 @@
   },
   "apps": [
     {
-      "name": "website",
-      "root": "apps/website/src",
-      "outDir": "dist/apps/website",
+      "name": "website-app",
+      "root": "apps/website-app/src",
+      "outDir": "dist/apps/website-app",
       "assets": [
         "assets",
         "favicon.ico",
@@ -73,9 +73,7 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "../../../tsconfig.spec.json",
       "prefix": "app",
-      "styles": [
-        "styles.scss"
-      ],
+      "styles": [],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
@@ -99,9 +97,7 @@
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "../../../tsconfig.spec.json",
       "prefix": "app",
-      "styles": [
-        "styles.css"
-      ],
+      "styles": [],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {

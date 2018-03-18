@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NxModule } from '@nrwl/nx';
 import { RouterModule } from '@angular/router';
 import { HomeComponent, PageHomeModule } from '@ngair-platform/website/page-home';
+import { HttpClientModule } from '@angular/common/http';
+import { ApolloModule } from 'apollo-angular';
+import { HttpLinkModule } from 'apollo-angular-link-http';
 
 @NgModule({
   imports: [
@@ -18,6 +21,9 @@ import { HomeComponent, PageHomeModule } from '@ngair-platform/website/page-home
       ],
       { initialNavigation: 'enabled' }
     ),
+    HttpClientModule,
+    ApolloModule,
+    HttpLinkModule,
     PageHomeModule
   ],
   declarations: [AppComponent],

@@ -1,0 +1,13 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "lib": ["es6", "esnext.asynciterable"],
+    "module": "commonjs",
+    "outDir": "../../dist/backend/data",
+    "sourceMap": true,
+    "target": "es6"
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}

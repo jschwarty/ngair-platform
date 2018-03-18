@@ -1,0 +1,11 @@
+<span class="id">{{episode.id}}</span>
+<h2>{{episode.title}}</h2>
+<section class="hosts">
+  <person-coin *ngFor="let person of episode.hosts" [person]="person"></person-coin>
+</section>
+<section class="guests">
+  <person-coin *ngFor="let person of episode.guests" [person]="person"></person-coin>
+</section>
+<section class="panelists">
+  <person-coin *ngFor="let person of episode.panelists" [person]="person"></person-coin>
+</section>
